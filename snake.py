@@ -17,11 +17,11 @@ class Game:
         self.screen_color = self.screen.fill((0, 128, 0))
         
         # adding the snake logo
-        self.icon = p.image.load('/Users/a713/Downloads/snake.png')
+        self.icon = p.image.load('snake.png').convert()
         p.display.set_icon(self.icon)
         
         # drawing snake head
-        self.snake_head = p.image.load('/Users/a713/Downloads/square.png').convert() 
+        self.snake_head = p.image.load('square.png').convert() 
         self.snake_length = 1
         self.snake_head_x = [32] * self.snake_length
         self.snake_head_y = [32] * self.snake_length
@@ -39,7 +39,7 @@ class Game:
         p.display.update()
         
     def Food(self):
-        self.food = p.image.load('/Users/a713/Downloads/food.png').convert()
+        self.food = p.image.load('food.png').convert()
         self.food_x = 320
         self.food_y = 320
         self.screen.blit(self.food, (self.food_x, self.food_x))
